@@ -20,4 +20,14 @@
         <servlet-name>RServlet</servlet-name>
         <url-pattern>/register</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ATeamServlet</servlet-name>
+        <servlet-class>AddTeamServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ATeamServlet</servlet-name>
+        <url-pattern>/addTeam</url-pattern>
+    </servlet-mapping>
+
 </web-app>
