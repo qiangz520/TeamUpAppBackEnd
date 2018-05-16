@@ -53,10 +53,11 @@ public class AddTeamServlet extends HttpServlet {
         Connection connection=DBUtil.getConnection();
         try{
             Statement statement=connection.createStatement();
+            int zero=0;
             String sqlInsert="insert into "+DBUtil.TABLE_ACTIVITY_INFO+"(activity_isValid,activity_issuer_id,activity_title," +
                     "activity_description,activity_kind,activity_issue_time,activity_time,activity_place,activity_max_number," +
-                    "activity_demand)values("+isValid+","+token+",'"+title+"','"+description+"','"+category+"','"+currentTime+"','"+datetime+"','"+
-                    place+"',"+number+",'"+demand+"')";
+                    "activity_demand,activity_joined_number,activity_weight)values("+isValid+","+token+",'"+title+"','"+description+"','"+category+"','"+currentTime+"','"+datetime+"','"+
+                    place+"',"+number+",'"+demand+"','"+zero+"','"+zero+"')";
             LogUtil.log("sqlInsert:"+sqlInsert);
             if(statement.executeUpdate(sqlInsert)>0){
                 code="200";

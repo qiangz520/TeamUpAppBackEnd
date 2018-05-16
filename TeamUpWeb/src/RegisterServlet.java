@@ -62,8 +62,11 @@ public class RegisterServlet extends HttpServlet {
                 code = "100";
                 message = "该账号已注册";
             } else {
-                String sqlInsert = "insert into " + DBUtil.TABLE_USERINFO + "(userAccount, userPassword) values('"
-                        + account + "', '" + password + "')";
+                String Empty="";
+                String NeverEdit="未填写";
+                int zero=0;
+                String sqlInsert = "insert into " + DBUtil.TABLE_USERINFO + "(userAccount, userPassword,HeadImage,NickName,Sex,School,ContactMethod,StudyLike,SportsLike,OutdoorsLike,GroupBookLike,CompetitionLike,FuntimeLike) values('"
+                        + account + "', '" + password + "','"+Empty+"','"+NeverEdit+"','"+NeverEdit+"','"+NeverEdit+"','"+NeverEdit+"','"+zero+"','"+zero+"','"+zero+"','"+zero+"','"+zero+"','"+zero+"')";
                 LogUtil.log(sqlInsert);
                 if (statement.executeUpdate(sqlInsert) > 0) { // 否则进行注册逻辑，插入新账号密码到数据库
                     code = "200";

@@ -30,4 +30,22 @@
         <url-pattern>/addTeam</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>IPersonInfoServlet</servlet-name>
+        <servlet-class>InitPersonInfoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>IPersonInfoServlet</servlet-name>
+        <url-pattern>/InitPersonInfo</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GHeaderInfoServlet</servlet-name>
+        <servlet-class>GetHeaderInfoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GHeaderInfoServlet</servlet-name>
+        <url-pattern>/GetHeaderInfo</url-pattern>
+    </servlet-mapping>
+
 </web-app>
