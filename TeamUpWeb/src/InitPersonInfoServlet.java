@@ -30,7 +30,6 @@ public class InitPersonInfoServlet extends HttpServlet {
         int UpdateIndex;
         String UpdateContent;
         int userID;
-//        LogUtil.log("GetHeaderInfoServlet:Running");
 
         request.setCharacterEncoding("UTF-8");
 
@@ -145,7 +144,6 @@ public class InitPersonInfoServlet extends HttpServlet {
         Gson gson=new Gson();
         PersonInfo personInfo=new PersonInfo(headImage,nickName,sex,school,contactMethod);
         String personInfoResponseStr=gson.toJson(personInfo);
-        LogUtil.log(personInfoResponseStr);
         response.getWriter().append(personInfoResponseStr);
     }
 }

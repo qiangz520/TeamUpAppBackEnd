@@ -51,7 +51,6 @@ public class GetHeaderInfoServlet extends HttpServlet {
         Gson gson=new Gson();
         HeaderInfoClass headerInfo=new HeaderInfoClass(HeadImage,NickName,ContactMethod);
         String headerInfoResponseStr=gson.toJson(headerInfo);
-        LogUtil.log(headerInfoResponseStr);
         response.getWriter().append(headerInfoResponseStr);
 
     }

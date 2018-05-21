@@ -27,7 +27,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>ATeamServlet</servlet-name>
-        <url-pattern>/addTeam</url-pattern>
+        <url-pattern>/AddTeam</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -46,6 +46,40 @@
     <servlet-mapping>
         <servlet-name>GHeaderInfoServlet</servlet-name>
         <url-pattern>/GetHeaderInfo</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UDataServlet</servlet-name>
+        <servlet-class>UpdateDataServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UDataServlet</servlet-name>
+        <url-pattern>/UpdateData</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>SearchServlet</servlet-name>
+        <servlet-class>SearchServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchServlet</servlet-name>
+        <url-pattern>/search</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>RecommendServlet</servlet-name>
+        <servlet-class>RecommendServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RecommendServlet</servlet-name>
+        <url-pattern>/recommend</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MyTeamServlet</servlet-name>
+        <servlet-class>MyTeamServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MyTeamServlet</servlet-name>
+        <url-pattern>/MyTeam</url-pattern>
     </servlet-mapping>
 
 </web-app>

@@ -8,9 +8,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>FirstWeb</title>
+    <title>Let's Team Up!</title>
   </head>
   <body>
-   Hello World!
+   Hello, Welcome to TeamUp App!
   </body>
 </html>
