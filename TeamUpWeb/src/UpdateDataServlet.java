@@ -22,6 +22,7 @@ public class UpdateDataServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         final String AddJoinNumber="2";//增加参与人数
         final String MinusJoinNumber="3";//减少参与
+        final String DeleteActivity="4";//删除活动
 
         String Update=request.getParameter("update");
         int activityID=Integer.parseInt(request.getParameter("activityID"));
@@ -69,6 +70,20 @@ public class UpdateDataServlet extends HttpServlet {
                             msg="取消失败！";
                         }
                     }
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }else if(Update.equals(DeleteActivity)){
+            try {
+                Statement delete=connection.createStatement();
+                String sqlDelete="delete from "+DBUtil.TABLE_ACTIVITY_INFO+" where activityID="+activityID;
+                LogUtil.log(sqlDelete);
+                if(delete.executeUpdate(sqlDelete)>0){
+                    msg="删除成功！";
+                }
+                else{
+                    msg="删除失败！";
                 }
             } catch (SQLException e) {
                 e.printStackTrace();

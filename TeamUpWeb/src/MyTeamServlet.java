@@ -36,7 +36,7 @@ public class MyTeamServlet extends HttpServlet {
         Connection connection=DBUtil.getConnection();
         try{
             Statement statement1=connection.createStatement();
-            String sqlQuery="select * from "+DBUtil.TABLE_ACTIVITY_INFO+" where activity_issuer_id="+userID;
+            String sqlQuery="select * from "+DBUtil.TABLE_ACTIVITY_INFO+" where activity_issuer_id="+userID+" order by activity_issue_time desc";
             ResultSet resultMyTeamSet=statement1.executeQuery(sqlQuery);
             while (resultMyTeamSet.next()){
                 activity_id=resultMyTeamSet.getInt(1);
